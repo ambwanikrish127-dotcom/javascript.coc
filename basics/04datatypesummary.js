@@ -35,3 +35,32 @@ const myFunction = function() {
 // console.log(typeof heroes);      // object
 // console.log(typeof myObj);       // object
 // console.log(typeof myFunction);  // function
+// *************//
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myYoutubename = "hiteshchoudharydotcom"
+
+let anothername = myYoutubename
+
+anothername = "chaiaurcode"
+
+console.log(myYoutubename);
+console.log(anothername);
+
+// Objects Heap memory me store hote hain
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+// userTwo ko object ki copy nahi mili
+// sirf Heap memory ke object ka reference (address) mila
+
+let userTwo = userOne
+
+// Heap me stored same object modify ho raha hai
+userTwo.email = "hitesh@google.com"
+
+// userOne aur userTwo dono same Heap object ko point karte hain
+console.log(userOne.email); // hitesh@google.com
+console.log(userTwo.email); // hitesh@google.com
